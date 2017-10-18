@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   groupsApi: 'http://localhost:5200/api/groups',
-  usersApi: 'http://localhost:5200/api/users'
+  usersApi: 'http://localhost:5200/api/users',
+  authRedirect: 'http://localhost:4200/'
 };

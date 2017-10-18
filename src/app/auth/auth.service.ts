@@ -13,7 +13,7 @@ export class AuthService {
         scope: 'profile openid app_me'
       },
       responseType: 'id_token token',
-      redirectUrl: 'http://localhost:4200/'
+      redirectUrl: process.env.authRedirect
     },
     languageDictionary: {
       title: 'Welcome on Shuffle !'
