@@ -4,6 +4,7 @@ import { AuthConfig } from './auth.config';
 import { Router } from '@angular/router';
 import { UserService } from '../user/user.service';
 import Auth0Lock from 'auth0-lock';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
@@ -13,7 +14,7 @@ export class AuthService {
         scope: 'profile openid app_me'
       },
       responseType: 'id_token token',
-      redirectUrl: process.env.authRedirect
+      redirectUrl: environment.authRedirect
     },
     languageDictionary: {
       title: 'Welcome on Shuffle !'
