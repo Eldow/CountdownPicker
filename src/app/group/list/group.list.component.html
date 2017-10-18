@@ -1,0 +1,7 @@
+<div class="row">
+  <button class="btn btn-primary" (click)="createGroup()"><i class="octicon octicon-plus"></i></button>
+</div>
+<div class="row card card-1 center-flex" *ngFor="let g of groups;">
+  <app-group-detail class="col-md-12 jumbotron" [group]="g"></app-group-detail>
+  <button class="btn btn-primary delete" (click)="deleteGroup(g)"><i class="octicon octicon-dash"></i></button>
+</div>

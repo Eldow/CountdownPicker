@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  groupsApi: 'https://countdownpicker.herokuapp.com/api/groups'
 };

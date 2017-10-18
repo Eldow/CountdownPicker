@@ -1,0 +1,30 @@
+h1:hover {
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.people {
+  margin-top: 0.5em;
+}
+
+.badge-pill {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+.badge:hover {
+  cursor: pointer;
+}

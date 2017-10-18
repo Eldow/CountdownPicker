@@ -1,0 +1,48 @@
+<div class="card card-1" [hidden]="shuffling">
+  <div class="row">
+    <div class="col-md-12 selector">
+      <div class="form-group center-flex">
+        <select class="form-control" [(ngModel)]="selectedGroup">
+          <option *ngFor="let g of groups;" [ngValue]="g">{{g.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="selectedGroup">
+    <div class="row title">
+      <h1 class="display-3 col-md-12">{{ selectedGroup.name }}</h1>
+    </div>
+    <div class="row center-flex">
+      <div *ngFor="let p of selectedGroup.people">
+        <span class="badge badge-pill badge-primary">{{ p }}</span>
+      </div>
+    </div>
+    <div class="row" [hidden]="selectedGroup.people.length === 0">
+      <button class="btn btn-primary shuffle" (click)="shuffle()"><i class="octicon octicon-rocket"></i></button>
+    </div>
+    <div class="row" [hidden]="selectedGroup.people.length !== 0">
+      <p class="col-md-12 text-md-center">Insert things in this group from the <a class="link" routerLink="../groups">management panel</a>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row col-md-12" [hidden]="!shuffling">
+  <svg viewBox="0 0 960 300">
+    <symbol id="s-text">
+      <text class="letterDrop" text-anchor="middle" x="50%" y="80%">{{ displayText }}</text>
+    </symbol>
+
+    <g class = "g-ants">
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+      <use xlink:href="#s-text" class="text-copy"></use>
+    </g>
+  </svg>
+</div>
+
+
+
+
+

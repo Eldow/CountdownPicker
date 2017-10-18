@@ -6,15 +6,16 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 
-const mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/countdown';
+const mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/shuffle';
 // Mongoose configuration
-mongoose.connect(mongoDB);
 const db = mongoose.connection;
+db.openUri(mongoDB);
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Get our API routes
 const api = require('./server/routes/api');
 const groups = require('./server/routes/groups.routes');
+const users = require('./server/routes/users.routes');
 
 const app = express();
 
@@ -47,7 +48,7 @@ app.use(function (req, res, next) {
 
 // Set our api routes
 app.use('/api', api);
-app.use('/api/playlists', playlists);
+app.use('/api/groups', groups);
 app.use('/api/users', users);
 
 // Catch all other routes and return the index file

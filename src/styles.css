@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  background: #C6DABF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #C6DABF, #041216);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #C6DABF, #041216); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;}
+
+.card {
+  position: relative;
+  margin: 2em;
+  border-radius: 2px;
+}
+
+.card:target {
+  -webkit-transition: opacity 2.0s ease-in;
+  -moz-transition: opacity 2.0s ease-in;
+  -o-transition: opacity 2.0s ease-in;
+  opacity: 1;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #1A936F;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #114B5F;
+  cursor: pointer;
+}
+
+.badge-pill {
+  background-color: #1A936F;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.badge-pill:hover {
+  opacity: 0.5;
+}
+
+h1 {
+  color: #114B5F;
+}
+
+input, select {
+  border-color: #1A936F !important;
+}
+
+.bg-inverse {
+  background-color: #041216 !important;
+}

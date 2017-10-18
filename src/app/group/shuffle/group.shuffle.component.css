@@ -1,0 +1,103 @@
+.row {
+  margin-top: 2em;
+}
+
+.title {
+  text-align: center;
+}
+
+.badge-pill {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+.badge-pill:hover {
+  opacity: 1;
+}
+
+.shuffle-top {
+  top: -5px;
+  width: 102%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  position: absolute;
+}
+
+.shuffle {
+  width: 102%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -5px;
+}
+
+.winner {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+svg {
+  display: block;
+  font-size: 3.5em;
+  width: 100vw;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #F3E9D2;
+  animation-delay: -1s;
+}
+
+.text-copy:nth-child(2){
+  stroke: #C6DABF;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #1A936F;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #114B5F;
+  animation-delay: -5s;
+}
+
+.link {
+  color: #1A936F;
+}
+
+.link:hover, .link:visited {
+  color: #114B5F;
+}
+
+.center-flex {
+  padding: 2em;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+.letterDrop {
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

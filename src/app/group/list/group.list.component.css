@@ -1,0 +1,16 @@
+.btn {
+  width: 100%;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  background-color: #eee;
+}
+
+.delete {
+  width: 101%;
+  position: absolute;
+  top: -5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+}
