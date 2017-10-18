@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { routes } from './app.routes';
 import { InputDirective } from './directives/input.directive';
 import { GroupShuffleComponent } from './group/shuffle/group.shuffle.component';
+import { UserComponent } from './user/user.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp( new AuthConfig({}), http, options);
@@ -23,7 +24,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
 
 @NgModule({
   declarations: [
-    AppComponent, GroupDetailComponent, GroupListComponent, GroupShuffleComponent, HomeComponent, LoginComponent, InputDirective
+    AppComponent, GroupDetailComponent, GroupListComponent, GroupShuffleComponent, HomeComponent, LoginComponent, InputDirective, UserComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule,
