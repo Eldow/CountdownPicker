@@ -3,7 +3,7 @@
   <input maxlength="40" [autofocus]="canFocus" placeholder="Put your group title here" class="form-control title" (keyup.enter)="updateGroup()" (blur)="updateGroup()" type="text" *ngIf="edit" [(ngModel)]="group.name"/>
 </div>
 <div class="row">
-  <input maxlength="25" [autofocus]="canFocus" (click)="canFocus = true" placeholder="Enter something you want to shuffle" class="form-control people" (keyup.enter)="pushPeople()" (blur)="pushPeople()" type="text" [(ngModel)]="newPeople"/>
+  <input maxlength="15" [autofocus]="canFocus" (click)="canFocus = true" placeholder="Enter something you want to shuffle" class="form-control people" (keyup.enter)="pushPeople()" (blur)="pushPeople()" type="text" [(ngModel)]="newPeople"/>
 </div>
 <div class="row">
   <div *ngFor="let p of group.people">

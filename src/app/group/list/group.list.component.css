@@ -7,6 +7,10 @@
   background-color: #eee;
 }
 
+.add {
+  margin-bottom: 3em;
+}
+
 .delete {
   width: 101%;
   position: absolute;

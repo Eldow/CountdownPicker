@@ -17,6 +17,7 @@ export class GroupShuffleComponent {
   interval: any;
   timeout: any;
   shuffling = false;
+  loading = false;
 
   constructor(public groupService: GroupService, route: ActivatedRoute) {
     this.groupService.getGroups().subscribe((data) => {
@@ -28,6 +29,7 @@ export class GroupShuffleComponent {
 
   shuffle() {
     this.shuffling = true;
+    this.loading = true;
     if (!this.selectedGroup || this.selectedGroup.people.length === 0) return;
     const people = this.selectedGroup.people;
     const speed = 500;
@@ -39,6 +41,7 @@ export class GroupShuffleComponent {
       this.showText(currentName, 0, speed / (currentName.length));
       current += speed;
       if (current > stop) {
+        this.loading = false;
         this.showText(currentName, 0, speed / currentName.length);
         clearInterval(this.interval);
       }

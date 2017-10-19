@@ -12,4 +12,5 @@ export class HomeComponent {
 
   constructor(public router: Router, public auth: AuthService) {
   }
+
 }
