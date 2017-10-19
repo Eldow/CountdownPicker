@@ -43,6 +43,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  .shuffle-card {
+    margin-top: 0;
+  }
 }
 
 .winner {
@@ -54,8 +58,6 @@
 svg {
   display: block;
   font-size: 6em;
-  width: 100vw;
-  height: 55vh;
   margin: 0 auto;
 }
 
