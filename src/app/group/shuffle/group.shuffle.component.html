@@ -1,5 +1,5 @@
 <div class="card card-1" [hidden]="shuffling">
-  <div class="row" [hidden]="groups.length === 0">
+  <div [hidden]="groups.length === 0">
     <div class="col-md-12 selector">
       <div class="form-group center-flex">
         <select class="form-control" [(ngModel)]="selectedGroup">
@@ -8,19 +8,19 @@
       </div>
     </div>
   </div>
-  <div class="row" [hidden]="groups.length !== 0">
+  <div [hidden]="groups.length !== 0">
     <p class="col-md-12 text-md-center">You have no groups yet, why don't you <a class="link" routerLink="../groups">create one</a>?</p>
   </div>
   <div *ngIf="selectedGroup">
-    <div class="row title">
+    <div class="title">
       <h1 class="display-3 col-md-12">{{ selectedGroup.name }}</h1>
     </div>
-    <div class="row center-flex">
+    <div class="row col-md-12">
       <div *ngFor="let p of selectedGroup.people">
         <span class="badge badge-pill badge-primary">{{ p }}</span>
       </div>
     </div>
-    <div class="row" [hidden]="selectedGroup.people.length === 0">
+    <div class="row shuffle-row" [hidden]="selectedGroup.people.length === 0">
       <button class="btn btn-primary shuffle" (click)="shuffle()"><i class="octicon octicon-rocket"></i></button>
     </div>
     <div class="row" [hidden]="selectedGroup.people.length !== 0">
@@ -30,7 +30,7 @@
 </div>
 <div class="loader" [hidden]="!loading">
 </div>
-<div class="row col-md-12" [hidden]="!shuffling" >
+<div class="col-md-12" [hidden]="!shuffling" >
   <svg viewBox="0 0 960 300">
     <symbol id="s-text">
       <text class="letterDrop" text-anchor="middle" x="50%" y="80%">{{ displayText }}</text>

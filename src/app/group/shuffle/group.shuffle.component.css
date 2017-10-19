@@ -34,7 +34,14 @@
 
 @media all and (max-width: 1044px) {
   .shuffle {
-    width: 104%;
+    width: 98%;
+    bottom: -15px;
+  }
+
+  .shuffle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
