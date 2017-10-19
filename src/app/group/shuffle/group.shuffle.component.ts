@@ -38,22 +38,25 @@ export class GroupShuffleComponent {
     this.interval = setInterval(() => {
       clearTimeout(this.timeout);
       const currentName = people[Math.floor(Math.random() * people.length)];
-      this.showText(currentName, 0, speed / (currentName.length));
+      this.showText(currentName, 0, speed / (currentName.length), false);
       current += speed;
       if (current > stop) {
-        this.loading = false;
-        this.showText(currentName, 0, speed / currentName.length);
+        this.showText(currentName, 0, speed / currentName.length, true);
         clearInterval(this.interval);
       }
     }, speed);
   }
 
-  showText(message, index, interval) {
+  showText(message, index, interval, last) {
     if (index < message.length) {
       const begin = this.displayText.substr(0, index) || '';
       const end = this.displayText.substr(index + 1) || '';
       this.displayText = (begin + message[index++] + end).substr(0, message.length);
-      this.timeout = setTimeout( () => { this.showText(message, index, interval); }, interval);
+      this.timeout = setTimeout( () => { this.showText(message, index, interval, last); }, interval);
+    } else {
+      if (last) {
+        this.loading = false;
+      }
     }
   }
 
